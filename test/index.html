@@ -262,6 +262,26 @@
 | --- |</pre>
 </div>
 
+<div class="case" data-name="table with pipe symbol inside it">
+  <div class="input">
+    <table>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Column 1 with | pipe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pre class="expected">| Column 1 |
+| --- |
+| Row 1, Column 1 with \| pipe |</pre>
+</div>
+
 <div class="case" data-name="non-definitive heading row (not converted)">
   <div class="input">
     <table>
