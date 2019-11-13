@@ -330,6 +330,16 @@
 ```</pre>
 </div>
 
+<div class="case" data-name="autolinks aren't escaped (so they're rendered properly)">
+  <div class="input"><p>Link to _yahoo_: https://yahoo.com/*XXX*xxx/_foo_ *website*</p></div>
+  <pre class="expected">Link to \_yahoo\_: https://yahoo.com/*XXX*xxx/_foo_ \*website\*</pre>
+</div>
+
+<div class="case" data-name="autolinks in link anchors are escaped (so the anchor doesn't have markdown formatting)">
+  <div class="input"><a href="https://goo.gle">https://yahoo.com/*XXX*xxx/_foo_</a></div>
+  <pre class="expected">[https://yahoo.com/\*XXX\*xxx/\_foo\_](https://goo.gle)</pre>
+</div>
+
 <!-- /TEST CASES -->
 
 <script src="turndown-plugin-gfm-test.browser.js"></script>
